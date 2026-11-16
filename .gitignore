@@ -86,3 +86,6 @@ bower_components/
 
 # TypeScript
 *.tsbuildinfo
+
+# PDFs
+*.pdf

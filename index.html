@@ -1,110 +1,107 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 
 <head>
-    <!-- Priority tags. These must come first. -->
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge; chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="assets/imgs/tab-logo.png" type="image/x-icon">
-
-    <!-- Document Title -->
-    <title>Willie M. Bonavente</title>
-
-    <!-- Primary Meta Tags -->
-    <meta name="title" content="Willie M. Bonavente" />
-    <meta name="author" content="Willie M. Bonavente" />
-    <!-- todo: add the images and the other assets -->
-    <!-- Add gif after deployment  -->
-    <!-- Icons -->
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>williembonvnte</title>
+    <link rel="stylesheet" href="./css/dialog.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/pagination.css">
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
 
 <body>
 
-    <div class="header slide">
-        <a href="./test.html" class="logo">Willie M. Bonavente</a>
-        <a href="./about.html">About</a>
+    <div class="layout-wrapper">
+
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="status-badge"><span class="dot"></span> Open to Roles</div>
+                <h1>Willie M. Bonavente</h1>
+                <h2>Software Developer</h2>
+                <p class="bio"></p>
+
+                <!-- Anchor Navigation -->
+                <nav class="side-nav">
+                    <button type="button" class="nav-link" id="about" data-dialog="dialog-about">01. About Me</button>
+                    <button type="button" class="nav-link" id="certs" data-dialog="dialog-certs">02. List of
+                        Certifications</button>
+                    <button type="button" class="nav-link" id="tech-stack" data-dialog="dialog-skills">03. Tech
+                        Stack</button>
+                </nav>
+            </div>
+
+            <!-- Socials & Quick Copy Email -->
+            <div class="sidebar-bottom">
+                <button id="copy-email-btn" class="email-btn" data-email="williebonavente@gmail.com">
+                    <span id="email-text">williebonavente@gmail.com</span>
+                    <span class="copy-tag" id="copy-status">Copy</span>
+                </button>
+                <div class="social-row">
+                    <a href="https://github.com/williebonavente" target="_blank" rel="noreferrer">GitHub ↗</a>
+                    <a href="https://www.linkedin.com/in/willie-bonavente-828180207" target="_blank"
+                        rel="noreferrer">LinkedIn ↗</a>
+                    <a href="./assets/resume/Bonavente_Willie_Resume_.pdf" target="_blank" rel="noreferrer">Resume ↗</a>
+                </div>
+            </div>
+        </aside>
+        
+        
+        <!-- RIGHT SCROLLABLE CONTENT -->
+        <main class="content">
+            
+            <!-- PROJECTS SECTION -->
+            <section id="projects" class="section">
+
+                <div class="section-header">
+                    <h3 class="section-label">Featured Works</h3>
+                    <select id="theme-select" class="theme-select" aria-label="Select color theme">
+                    </select>
+                </div>
+     
+
+                <div class="project-list"></div>
+
+                <!-- Pagination -->
+                <nav class="page" id="pagination-controls" aria-label="Pagination" style="display:none">
+                    <button type="button" class="prev" id="prev-btn" aria-label="Previous page">&lt; Prev</button>
+                    <span class="current-page" id="page-indicator">1 of 1</span>
+                    <button type="button" class="next" id="next-btn" aria-label="Next page">Next &gt;</button>
+                </nav>
+            </section>
+
+            <footer class="footer">
+                <p>Designed & Built by Willie M. Bonavente © 2026</p>
+            </footer>
+        </main>
     </div>
 
-    <div class="hero">
-        <h1 class="slide delay01">Your Future Software Developer</h1>
-    </div>
+    <script src="./js/dialogProject.js"></script>
+    <script src="./js/dialogsData.js"></script>
+    <script src="./js/themesData.js"></script>
 
-    <div class="grid slide delay02">
+    <script src="./js/index.js"></script>
+    <script src="./js/projects.js"></script>
+    <script src="./js/renderProject.js"></script>
 
-        <a href="assets/imgs/picasso-painting.png" class="work-item">
-            <div class="work-item-image">
-                <img src="assets/imgs/picasso-painting.png">
-            </div>
-            <div class="work-item-info">
-                <div class="work-item-company">Three Musicians, 1921</div>
-                <div class="work-item-description">Bootstrap CSS</div>
-            </div>
-        </a>
+    <script>
+        const saved = localStorage.getItem('portfolio-theme');
+        if (saved && saved !== 'dark') {
+            document.documentElement.setAttribute('data-theme', saved);
+        }
+    </script>
 
-        <a href="assets/imgs/rothko-painting.png" class="work-item">
-            <div class="work-item-image">
-                <img src="assets/imgs/rothko-painting.png">
-            </div>
-            <div class="work-item-info">
-                <div class="work-item-company">Rothko Painting</div>
-                <div class="work-item-description">Understanding of Color</div>
-            </div>
-        </a>
+    <script src="./js/themeApplyer.js"></script>
 
-        <a href="assets/imgs/owly-night.png" class="work-item">
-            <div class="work-item-image">
-                <img src="assets/imgs/owly-night.png">
-            </div>
-            <div class="work-item-info">
-                <div class="work-item-company">Dark theme City</div>
-                <div class="work-item-description">Dark Mode Activated</div>
-            </div>
-        </a>
-
-        <a href="assets/imgs/task-write.png" class="work-item">
-            <div class="work-item-image">
-                <img src="assets/imgs/task-write.png">
-            </div>
-            <div class="work-item-info">
-                <div class="work-item-company">Task Write</div>
-                <div class="work-item-description">Final Project in Information Management</div>
-            </div>
-        </a>
-
-        <a href="assets/imgs/inituion.png" class="work-item">
-            <div class="work-item-image">
-                <img src="assets/imgs/inituion.png">
-            </div>
-            <div class="work-item-info">
-                <div class="work-item-company">Archive</div>
-                <div class="work-item-description">Past design adventures</div>
-            </div>
-        </a>
-
-    </div>
-
-    <div class="about-me slide delay03">
-        <div class="description">
-            <p>I'm Willie M. Bonavente, a programmer based in the Philippines, currently 3rd-Year Student, Bachelor of
-                Science in Information Technology at PUP Sta.Mesa Manila, Philippines.
-            </p>
-            <a href="about.html">More about me</a>
-        </div>
-        <div class="contact">
-            <p>Get in touch <span>(Click to copy)</span></p>
-            <div class="email" id="copyemail" data-clipboard-text="williembonavente@iskolarngbayan.pup.edu.ph">
-                williembonavente@iskolarngbayan.pup.edu.ph</div>
-        </div>
-    </div>
-
-    <footer class="slide delay03">© Willie M. Bonavente 2024</footer>
-
-    <!-- Copy to clipboard -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-    <script src="index.js"></script>
-
+    <!-- Script Data -->
+    <!-- <script type="module" src="./scripts/projects.js"></script>
+     <script type="module" src="./scripts/dialogsData.js"></script> -->
 </body>
 
 </html>

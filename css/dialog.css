@@ -1,0 +1,135 @@
+@import './theme.css';
+
+body:has(dialog[open]) {
+    overflow: hidden;
+}
+
+button.nav-link {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-align: left;
+}
+
+.portfolio-dialog {
+    margin: auto;
+    width: 90%;
+    max-width: 560px;
+    max-height: 85vh;
+    height: fit-content;
+    background-color: var(--surface);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px var(--backdrop);
+}
+
+.portfolio-dialog::backdrop {
+    background: var(--backdrop);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.portfolio-dialog[open] {
+    display: flex;
+    flex-direction: column;
+    animation: dialogFadeIn 0.2s ease-out;
+}
+
+@keyframes dialogFadeIn {   
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(0.98);
+    } to {
+        opacity: 1;
+        transform: translateY(0) scale(1)
+    }
+}
+
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.dialog-header h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.close-dialog {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.close-dialog:hover {
+    color: var(--text-main);
+    background: var(--surface-hover);
+    cursor: pointer;
+}
+
+.dialog-body { 
+    background: var(--bg);
+    padding: 24px; 
+    overflow-y: auto;
+    line-height: 1.65;
+}
+
+
+.dialog-header {
+    background-color: var(--bg);
+
+}
+
+.dialog-body p {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+}
+
+.dialog-body p:last-child {
+    margin-bottom: 0;
+}
+
+.cert-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cert-list li {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 14px 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.cert-list strong {
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.cert-list span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--accent);
+}

@@ -1,0 +1,246 @@
+:root {
+    --bg: #0b0f19;
+    --surface: #111827;
+    --surface-hover: #1a2234;
+    --border: #1f2937;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+    --accent: #38bdf8;
+    --accent-glow: rgba(56, 189, 248, 0.12);
+    --backdrop: rgba(11, 15, 25, 0.65);
+    --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    --success: #4ade80;
+}
+
+[data-theme="light"] {
+    --bg: #f8fafc;
+    --surface: #fff;
+    --surface-hover: #f1f5f9;
+    --border: #e2e8f0;
+    --text-main: #0f127a;
+    --text-muted: #475569;
+    --accent: #0284c7;
+    --accent-glow: rgba(2, 132, 199, 0.1);
+    --backdrop: rgba(15, 23, 42, 0.35);
+    --shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.15);
+    --success: #16a34a;
+}
+
+[data-theme="pinkii"] {
+    --bg: #fdf2f8; 
+    --surface: #ffffff;       
+    --surface-hover: #fce7f3; 
+    --border: #fbcfe8;        
+    --text-main: #500724;     
+    --text-muted: #9d174d;    
+    --accent: #ec4899;        
+    --accent-glow: rgba(236, 72, 153, 0.14);
+    --backdrop: rgba(80, 7, 36, 0.35);
+    --shadow: 0 20px 40px -15px rgba(236, 72, 153, 0.18);
+    --success: #db2777;
+}
+
+[data-theme="phub"] {
+    --bg: #000000;       
+    --surface: #151515;      
+    --surface-hover: #222222; 
+    --border: #2a2a2a;        
+    --text-main: #ffffff;  
+    --text-muted: #999999;   
+    --accent: #ff9000;       
+    --accent-glow: #ff9000; 
+    --backdrop: rgba(0, 0, 0, 0.85);
+    --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.95);
+    --success: #ff9000;
+}
+
+[data-theme="phub"] .status-badge,
+[data-theme="phub"] .tech-tags li {
+    background-color: var(--accent);
+    color: #000000;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+[data-theme="phub"] .status-badge .dot {
+    background-color: #000000;
+}
+
+[data-theme="phub"] .copy-tag.copied {
+    background-color: var(--accent);
+    color: #000000;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+[data-theme="emerald"] {
+    --bg: #04130d;        
+    --surface: #0a2118;       
+    --surface-hover: #113024;
+    --border: #173e2f;      
+    --text-main: #ecfdf5;   
+    --text-muted: #86efac;  
+    --accent: #10b981;       
+    --accent-glow: rgba(16, 185, 129, 0.14);
+    --backdrop: rgba(4, 19, 13, 0.7);
+    --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
+    --success: #34d399;
+}
+
+[data-theme="diamond"] {
+    --bg: #0b1120;
+    --surface: #151f32;
+    --surface-hover: #1e2d45;
+    --border: #334b68;
+    --text-main: #f0f9ff;
+    --text-muted: #94a3b8;
+    --accent: #67e8f9;
+    --accent-glow: rgba(103, 232, 249, 0.18);
+    --backdrop: rgba(2, 6, 23, 0.75);
+    --shadow: 0 20px 40px -15px rgba(103, 232, 249, 0.15);
+    --success: #67f9b5;
+}
+
+[data-theme="lavender"] {
+    --bg: #f5f3ff;
+    --surface: #ffffff;
+    --surface-hover: #ede9fe;
+    --border: #ddd6fe;
+    --text-main: #2e1065;
+    --text-muted: #7c3aed;
+    --accent: #8b5cf6;
+    --accent-glow: rgba(139, 92, 246, 0.14);
+    --backdrop: rgba(46, 16, 101, 0.35);
+    --shadow: 0 20px 40px -15px rgba(139, 92, 246, 0.18);
+    --success: #7c3aed;
+}
+
+/* Iridescence Theme Override */
+[data-theme="iridescence"] {
+    --bg: #090814;            /* Deep cosmic indigo-black */
+    --surface: #121024;       /* Translucent-feel midnight violet surface */
+    --surface-hover: #1b1736; /* Elevated plum-violet hover */
+    --border: #2a244d;        /* Soft twilight border */
+    --text-main: #f5f3ff;     /* Crisp pearl-white primary text */
+    --text-muted: #a5b4fc;    /* Soft periwinkle secondary text */
+    --accent: #c084fc;        /* Luminous iridescent orchid */
+    --accent-glow: rgba(192, 132, 252, 0.15);
+    --success: #2dd4bf;       /* Prismatic aqua-mint */
+    --backdrop: rgba(9, 8, 20, 0.75);
+    --shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.25);
+}
+
+/* Optional: Subtle Prismatic Shimmer on Cards & Badges */
+[data-theme="iridescence"] .project-card {
+    background: linear-gradient(
+        135deg,
+        rgba(34, 211, 238, 0.05) 0%,
+        rgba(192, 132, 252, 0.06) 50%,
+        rgba(244, 114, 182, 0.05) 100%
+    ), var(--surface);
+}
+
+[data-theme="iridescence"] .project-card:hover {
+    border-color: #38bdf8;
+    box-shadow: 
+        -6px 0 20px -6px rgba(34, 211, 238, 0.22),
+         6px 0 20px -6px rgba(244, 114, 182, 0.22);
+}
+
+[data-theme="iridescence"] .tech-tags li {
+    background: linear-gradient(
+        90deg,
+        rgba(34, 211, 238, 0.12),
+        rgba(192, 132, 252, 0.14),
+        rgba(244, 114, 182, 0.12)
+    );
+    border: 1px solid rgba(192, 132, 252, 0.25);
+}
+
+/* Pride Theme Override */
+[data-theme="pride"] {
+    --bg: #fafafa;            /* Clean neutral gallery off-white so rainbow colors pop */
+    --surface: #ffffff;       /* Crisp white cards */
+    --surface-hover: #f8fafc; /* Subtle cool lift on hover */
+    --border: #e4e4e7;        /* Neutral zinc border so it doesn't clash with the spectrum */
+    --text-main: #18181b;     /* Deep charcoal for sharp readability */
+    --text-muted: #52525b;    /* Balanced neutral gray */
+    --accent: #732982;        /* Rich Pride violet as primary interactive accent */
+    --accent-glow: rgba(115, 41, 130, 0.12);
+    --backdrop: rgba(24, 24, 27, 0.45);
+    --shadow: 0 20px 40px -15px rgba(115, 41, 130, 0.16);
+    --success: #008026;       /* Official Pride flag green */
+
+    /* Reusable 6-Stripe Pride Spectrum Gradient */
+    --pride-gradient: linear-gradient(
+        90deg,
+        #e40303 0%,
+        #ff8c00 20%,
+        #ffed00 40%,
+        #008026 60%,
+        #24408e 80%,
+        #732982 100%
+    );
+}
+
+/* Top Spectrum Ribbon Across the Viewport */
+[data-theme="pride"] body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--pride-gradient);
+    z-index: 9999;
+}
+
+/* Rainbow Gradient Border on Project Card Hover */
+[data-theme="pride"] .project-card {
+    position: relative;
+    background-clip: padding-box;
+}
+
+[data-theme="pride"] .project-card:hover {
+    border-color: transparent;
+    background: 
+        linear-gradient(var(--surface), var(--surface)) padding-box,
+        var(--pride-gradient) border-box;
+    box-shadow: 0 14px 30px -10px rgba(115, 41, 130, 0.18);
+}
+
+/* Subtle Spectrum Underline on Section Header */
+[data-theme="pride"] .section-header {
+    padding-bottom: 12px;
+    border-bottom: 2px solid transparent;
+    border-image: var(--pride-gradient) 1;
+}
+
+/* Status Badge Dot & Tech Pills */
+[data-theme="pride"] .status-badge .dot {
+    background: var(--pride-gradient);
+}
+
+[data-theme="pride"] .tech-tags li {
+    background: linear-gradient(
+        90deg,
+        rgba(228, 3, 3, 0.08),
+        rgba(255, 140, 0, 0.08),
+        rgba(0, 128, 38, 0.08),
+        rgba(36, 64, 142, 0.08),
+        rgba(115, 41, 130, 0.08)
+    );
+    color: #18181b;
+    border: 1px solid rgba(115, 41, 130, 0.22);
+}
+
+body,
+.project-card,
+.portfolio-dialog,
+.email-btn,
+.page button {
+    transition: background-color 0.25s ease, 
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
