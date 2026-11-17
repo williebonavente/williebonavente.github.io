@@ -1,4 +1,3 @@
-
 function initDialogs() {
     const dialog = document.createElement('dialog');
     dialog.id = 'portfolio-modal'
@@ -7,8 +6,8 @@ function initDialogs() {
         <div class="dialog-header">
             <h3 id="modal-title"></h3>
             <button type="button" class="close-dialog" aria-label="Close">✕</button>
-            </div> 
-            <div class="dialog-body" id="modal-body"></div>
+        </div> 
+        <div class="dialog-body" id="modal-body"></div>
     `;
     document.body.appendChild(dialog);
 
@@ -22,9 +21,16 @@ function initDialogs() {
             const content = DIALOGS_DATA[key];
 
             if (content) {
+                dialog.setAttribute('data-active-dialog', key);
                 modalTitle.textContent = content.title;
                 modalBody.innerHTML = content.body;
                 dialog.showModal();
+
+                console.log(key);
+                if (key === 'piano' && typeof mountPiano === 'function') {
+                    console.log(true);
+                    mountPiano();
+                }
             }
         });
     });
@@ -36,6 +42,20 @@ function initDialogs() {
             dialog.close();
         }
     });
+
+    dialog.addEventListener('close', () => {
+        dialog.removeAttribute('data-active-dialog');
+        if (typeof stopDemo === 'function') {
+            stopDemo();
+        }
+    });
+
+    dialog.addEventListener('close', () => {
+        dialog.removeAttribute('data-acitive-dialog');
+        if (typeof unmountPiano === 'function') {
+            unmountPiano();
+        }
+    })
 }
 
 

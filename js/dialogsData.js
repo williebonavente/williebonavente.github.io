@@ -39,5 +39,21 @@ const DIALOGS_DATA = {
                 </div>
             </div>
         `
+    },
+    piano: {
+        title: 'Interactive Synth',
+        subtitle: 'Use Keyboard (Z-;) or Click Keys • Switch themes anytime to change visualizer colors',
+        body: `
+            <div class="piano-modal-body">
+                <div class="piano-controls" style="margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
+                    <button type="button" id="demo-song-btn" class="piano-btn">▶ River Flows in You</button>
+                    <span class="piano-hint">Keys: Z-C (Low) • A-; (Main)</span>
+                </div>
+                <div class="piano-wrapper">
+                    <canvas id="piano-canvas"></canvas>
+                    <div id="piano-keys" class="piano-keys"></div>
+                </div>
+            </div>
+        `
     }
 };

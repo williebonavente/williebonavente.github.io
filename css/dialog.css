@@ -133,3 +133,9 @@ button.nav-link {
     font-size: 0.78rem;
     color: var(--accent);
 }
+
+/* Wider modal shell specifically when hosting the piano */
+.portfolio-dialog[data-active-dialog="piano"] {
+    max-width: 780px;
+    width: 92vw;
+}

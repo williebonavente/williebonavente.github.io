@@ -25,6 +25,12 @@ function applyTheme(themeId) {
     if (themeSelect) {
         themeSelect.value = activeTheme;
     }
+
+    if (activeTheme === 'piano') {
+        window.dispatchEvent(new Event('resize'));
+    } else if (typeof stopDemo === 'function') {
+        stopDemo();
+    }
 }
 
 function initTheme() {

@@ -34,6 +34,10 @@
                         Certifications</button>
                     <button type="button" class="nav-link" id="tech-stack" data-dialog="dialog-skills">03. Tech
                         Stack</button>
+                    <button type="button" class="nav-link piano-nav-trigger" data-dialog="piano">
+                        <span class="nav-num">04.</span> Play Piano
+                    </button>
+
                 </nav>
             </div>
 
@@ -51,11 +55,10 @@
                 </div>
             </div>
         </aside>
-        
-        
+
+
         <!-- RIGHT SCROLLABLE CONTENT -->
         <main class="content">
-            
             <!-- PROJECTS SECTION -->
             <section id="projects" class="section">
 
@@ -64,7 +67,7 @@
                     <select id="theme-select" class="theme-select" aria-label="Select color theme">
                     </select>
                 </div>
-     
+
 
                 <div class="project-list"></div>
 
@@ -82,22 +85,36 @@
         </main>
     </div>
 
+    <!-- DATA -->
+
     <script src="./js/dialogProject.js"></script>
     <script src="./js/dialogsData.js"></script>
     <script src="./js/themesData.js"></script>
-
+    
+    <!-- FUNCTIONS -->
+    
     <script src="./js/index.js"></script>
     <script src="./js/projects.js"></script>
     <script src="./js/renderProject.js"></script>
-
+    
+    <!-- PIANO  -->
+    <script src="./js/piano/pianoGetTheme.js"></script>
+    <script src="./js/piano/pianoNotes.js"></script>
+    <script src="./js/piano/pianoBuild.js"></script>
+    <script src="./js/piano/pianoVisualizer.js"></script>
+    <script src="./js/piano/playTone.js"></script>
+    <script src="./js/piano/pianoInit.js"></script>
+    <script src="./js/piano/playDemo.js"></script>
+    <script src="./js/piano/stopDemo.js"></script>
+    
     <script>
         const saved = localStorage.getItem('portfolio-theme');
         if (saved && saved !== 'dark') {
             document.documentElement.setAttribute('data-theme', saved);
         }
-    </script>
+        </script>
 
-    <script src="./js/themeApplyer.js"></script>
+<script src="./js/themeApplyer.js"></script>
 
     <!-- Script Data -->
     <!-- <script type="module" src="./scripts/projects.js"></script>
