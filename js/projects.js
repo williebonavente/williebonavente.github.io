@@ -1,4 +1,4 @@
-const BIO = "I enjoy turning complex requirements into fast and reliable software.";
+const BIO = "I enjoy turning requirements into fast and reliable software.";
 
 const PROJECTS_DATA = [
   {

@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 460" width="420" height="460" role="img" aria-label="Stylized vector illustration of Kasane Teto with crimson twin drills">
+  <defs>
+    <!-- Crimson Hair Gradients -->
+    <linearGradient id="tetoCrimsonMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff4d6d" />
+      <stop offset="55%" stop-color="#d92b4b" />
+      <stop offset="100%" stop-color="#8f122a" />
+    </linearGradient>
+
+    <linearGradient id="tetoDrillShade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e63253" />
+      <stop offset="65%" stop-color="#b51b38" />
+      <stop offset="100%" stop-color="#6e0b1f" />
+    </linearGradient>
+
+    <!-- Skin & Uniform Gradients -->
+    <linearGradient id="tetoSkin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff0ea" />
+      <stop offset="100%" stop-color="#f3cfc3" />
+    </linearGradient>
+
+    <linearGradient id="tetoUniform" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eceef3" />
+      <stop offset="100%" stop-color="#c6ccd8" />
+    </linearGradient>
+
+    <!-- Ruby Eye Gradient -->
+    <linearGradient id="tetoEye" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b86" />
+      <stop offset="50%" stop-color="#d92b4b" />
+      <stop offset="100%" stop-color="#59091a" />
+    </linearGradient>
+  </defs>
+
+  <!-- Subtle Backdrop Accent -->
+  <circle cx="210" cy="215" r="145" fill="#d92b4b" opacity="0.08" />
+  <path d="M44 162 Q132 142 210 162 T376 162" fill="none" stroke="#18191f" stroke-width="1.5" opacity="0.16" />
+  <path d="M44 174 Q132 154 210 174 T376 174" fill="none" stroke="#d92b4b" stroke-width="1.5" opacity="0.22" />
+  <path d="M44 186 Q132 166 210 186 T376 186" fill="none" stroke="#18191f" stroke-width="1.5" opacity="0.16" />
+
+  <!-- Left Twin Drill (Back Layer) -->
+  <g id="left-drill" stroke="#18191f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M136 126 C72 118, 62 162, 128 168 C64 176, 60 220, 128 226 C68 234, 66 276, 128 282 C82 288, 86 322, 124 336 L136 310 C112 298, 110 278, 134 268 C108 256, 108 234, 134 222 C108 208, 110 184, 136 172 Z" fill="url(#tetoDrillShade)" />
+    <!-- Drill Highlight Ribbons -->
+    <path d="M84 148 Q106 154 128 158" fill="none" stroke="#ff8fa3" stroke-width="2.5" opacity="0.7" />
+    <path d="M84 202 Q106 208 128 212" fill="none" stroke="#ff8fa3" stroke-width="2.5" opacity="0.7" />
+    <path d="M88 256 Q108 262 128 266" fill="none" stroke="#ff8fa3" stroke-width="2.2" opacity="0.65" />
+  </g>
+
+  <!-- Right Twin Drill (Back Layer) -->
+  <g id="right-drill" stroke="#18191f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M284 126 C348 118, 358 162, 292 168 C356 176, 360 220, 292 226 C352 234, 354 276, 292 282 C338 288, 334 322, 296 336 L284 310 C308 298, 310 278, 286 268 C312 256, 312 234, 286 222 C312 208, 310 184, 284 172 Z" fill="url(#tetoDrillShade)" />
+    <!-- Drill Highlight Ribbons -->
+    <path d="M292 158 Q314 154 336 148" fill="none" stroke="#ff8fa3" stroke-width="2.5" opacity="0.7" />
+    <path d="M292 212 Q314 208 336 202" fill="none" stroke="#ff8fa3" stroke-width="2.5" opacity="0.7" />
+    <path d="M292 266 Q312 262 332 256" fill="none" stroke="#ff8fa3" stroke-width="2.2" opacity="0.65" />
+  </g>
+
+  <!-- Shoulders & Slate Military-Idol Collar -->
+  <g id="outfit" stroke="#18191f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Neck -->
+    <path d="M192 238 L192 276 L228 276 L228 238 Z" fill="url(#tetoSkin)" stroke="none" />
+    <path d="M192 242 L192 274 M228 242 L228 274" fill="none" stroke="#18191f" stroke-width="3" />
+    <path d="M193 252 Q210 262 227 252" fill="none" stroke="#d99b8c" stroke-width="2.5" />
+
+    <!-- Torso / Shoulders -->
+    <path d="M106 420 C110 340, 142 292, 192 272 L210 296 L228 272 C278 292, 310 340, 314 420 Z" fill="url(#tetoUniform)" />
+
+    <!-- Crimson Trim & Shoulder Accents -->
+    <path d="M144 294 L132 420 M276 294 L288 420" fill="none" stroke="#d92b4b" stroke-width="6" />
+    <path d="M144 294 L132 420 M276 294 L288 420" fill="none" stroke="#18191f" stroke-width="2.2" stroke-dasharray="10 6" />
+
+    <!-- Crisp Lapel / Collar -->
+    <path d="M188 272 L162 308 L210 342 L258 308 L232 272 L210 298 Z" fill="#f7f8fa" />
+    <path d="M210 298 L210 420" fill="none" stroke="#18191f" stroke-width="2.5" />
+    <!-- Crimson Bow / Accent -->
+    <polygon points="210,322 186,308 190,334" fill="#d92b4b" />
+    <polygon points="210,322 234,308 230,334" fill="#d92b4b" />
+    <circle cx="210" cy="322" r="6" fill="#18191f" />
+  </g>
+
+  <!-- Head & Face -->
+  <g id="face">
+    <path d="M144 134 C144 88, 276 88, 276 134 C278 186, 256 232, 210 250 C164 232, 142 186, 144 134 Z" fill="url(#tetoSkin)" stroke="#18191f" stroke-width="3" />
+
+    <!-- Subtle Cheek Blush -->
+    <ellipse cx="168" cy="196" rx="13" ry="6" fill="#ff7b93" opacity="0.32" />
+    <ellipse cx="252" cy="196" rx="13" ry="6" fill="#ff7b93" opacity="0.32" />
+
+    <!-- Eyebrows -->
+    <path d="M158 156 Q175 149 192 155" fill="none" stroke="#8f122a" stroke-width="3" stroke-linecap="round" />
+    <path d="M228 155 Q245 149 262 156" fill="none" stroke="#8f122a" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Left Eye -->
+    <g transform="translate(176, 176)">
+      <ellipse cx="0" cy="0" rx="16" ry="19" fill="#ffffff" stroke="#18191f" stroke-width="2.5" />
+      <ellipse cx="1" cy="1" rx="11" ry="14" fill="url(#tetoEye)" />
+      <ellipse cx="1" cy="2" rx="5" ry="7" fill="#18191f" />
+      <circle cx="-4" cy="-5" r="4.5" fill="#ffffff" />
+      <circle cx="5" cy="5" r="2" fill="#ffffff" opacity="0.85" />
+      <path d="M-18 -4 Q0 -18 18 -3" fill="none" stroke="#18191f" stroke-width="4" stroke-linecap="round" />
+    </g>
+
+    <!-- Right Eye -->
+    <g transform="translate(244, 176)">
+      <ellipse cx="0" cy="0" rx="16" ry="19" fill="#ffffff" stroke="#18191f" stroke-width="2.5" />
+      <ellipse cx="-1" cy="1" rx="11" ry="14" fill="url(#tetoEye)" />
+      <ellipse cx="-1" cy="2" rx="5" ry="7" fill="#18191f" />
+      <circle cx="-5" cy="-5" r="4.5" fill="#ffffff" />
+      <circle cx="4" cy="5" r="2" fill="#ffffff" opacity="0.85" />
+      <path d="M-18 -3 Q0 -18 18 -4" fill="none" stroke="#18191f" stroke-width="4" stroke-linecap="round" />
+    </g>
+
+    <!-- Nose & Smile -->
+    <path d="M209 192 L206 201 L212 203" fill="none" stroke="#b87d6e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M197 216 Q210 226 223 216" fill="none" stroke="#18191f" stroke-width="2.8" stroke-linecap="round" />
+  </g>
+
+  <!-- Crown, Bangs & Hair Pins -->
+  <g id="hair-front" stroke="#18191f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Main Hair Crown -->
+    <path d="M138 144 C136 74, 284 74, 282 144 C274 114, 254 102, 232 104 L224 158 L208 116 L192 162 L180 112 C160 116, 146 128, 138 144 Z" fill="url(#tetoCrimsonMain)" />
+
+    <!-- Side Bang Locks Framing Face -->
+    <path d="M142 138 C132 164, 134 196, 148 216 L156 174 Z" fill="url(#tetoCrimsonMain)" />
+    <path d="M278 138 C288 164, 286 196, 272 216 L264 174 Z" fill="url(#tetoCrimsonMain)" />
+
+    <!-- Hair Shine Highlights -->
+    <path d="M164 112 Q210 98 256 112" fill="none" stroke="#ff99ac" stroke-width="4" opacity="0.65" />
+
+    <!-- Signature Twin Hairpins -->
+    <rect x="144" y="128" width="22" height="7" rx="2" transform="rotate(-18 144 128)" fill="#18191f" stroke="none" />
+    <rect x="254" y="122" width="22" height="7" rx="2" transform="rotate(18 254 122)" fill="#18191f" stroke="none" />
+  </g>
+</svg>

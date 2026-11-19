@@ -279,7 +279,7 @@ body {
     border-radius: 99px;
     cursor: pointer;
     margin-left: auto;
-    transition:  color 0.2s, border-color 0.2s;
+    transition: color 0.2s, border-color 0.2s;
 }
 
 .theme-btn:hover {
@@ -299,6 +299,7 @@ body {
     outline: none;
     transition: border-color 0.2s, background-color 0.2s, color 0.2s;
 }
+
 .copy-tag.copied {
     color: var(--success);
     font-weight: 700;
@@ -396,6 +397,7 @@ body {
     color: #fff;
     box-shadow: 0 0 25px var(--accent);
 }
+
 .key-black {
     position: absolute;
     top: 0;
@@ -434,6 +436,98 @@ body {
     border-color: var(--accent);
 }
 
+.theme-burst-particle {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    user-select: none;
+    z-index: 99999;
+    font-size: var(--particle-size, 22px);
+    color: var(--particle-color, var(--accent));
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.22));
+    will-change: transform, opacity;
+}
+
+/* Run symbol float ONLY when theme is NOT cigarette or cigar */
+html:not([data-theme="cigarette"]):not([data-theme="cigar"]) body:not([data-theme="cigarette"]):not([data-theme="cigar"]) .theme-burst-particle:not(.is-smoke) {
+    animation: theme-particle-float var(--particle-duration, 1900ms) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hide any non-smoke burst particles when cigarette/cigar theme is active */
+[data-theme="cigarette"] .theme-burst-particle:not(.is-smoke),
+[data-theme="cigar"] .theme-burst-particle:not(.is-smoke) {
+    display: none;
+}
+
+@keyframes theme-particle-float {
+    0% {
+        opacity: 0;
+        transform: translate3d(var(--x0), var(--y0), 0) scale(0.4) rotate(0deg);
+    }
+
+    12% {
+        opacity: 1;
+        transform: translate3d(calc(var(--x0) + var(--sway) * 0.4), calc(var(--y0) - var(--dy) * 0.14), 0) scale(1.15) rotate(var(--rot));
+    }
+
+    45% {
+        opacity: 1;
+        transform: translate3d(calc(var(--x0) + var(--dx) * 0.45 - var(--sway)), calc(var(--y0) - var(--dy) * 0.52), 0) scale(1.05) rotate(calc(var(--rot) * -0.8));
+    }
+
+    78% {
+        opacity: 0.92;
+        transform: translate3d(calc(var(--x0) + var(--dx) * 0.8 + var(--sway) * 0.7), calc(var(--y0) - var(--dy) * 0.84), 0) scale(1) rotate(var(--rot));
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(calc(var(--x0) + var(--dx)), calc(var(--y0) - var(--dy)), 0) scale(0.85) rotate(calc(var(--rot) * 1.4));
+    }
+}
+
+.theme-burst-particle.is-smoke {
+    position: fixed;
+    left: var(--x0);
+    top: var(--y0);
+    width: var(--particle-size, 16px);
+    height: var(--particle-size, 16px);
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            var(--particle-color) 0%,
+            rgba(214, 209, 200, 0.24) 50%,
+            transparent 75%);
+    filter: blur(3.5px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 99999;
+    will-change: transform, opacity;
+    animation: cigar-smooth-curl var(--particle-duration, 3200ms) ease-in-out both;
+}
+
+@keyframes cigar-smooth-curl {
+    0% {
+        opacity: 0;
+        transform: translate3d(-50%, -50%, 0) scale(0.4) rotate(0deg);
+    }
+
+    20% {
+        opacity: 0.65;
+        transform: translate3d(calc(-50% + var(--sway) * 0.35), calc(-50% - var(--dy) * 0.2), 0) scale(0.75) rotate(calc(var(--rot) * 0.25));
+    }
+
+    55% {
+        opacity: 0.45;
+        transform: translate3d(calc(-50% - var(--sway) * 0.45), calc(-50% - var(--dy) * 0.58), 0) scale(1.35) rotate(calc(var(--rot) * 0.65));
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate3d(calc(-50% + var(--dx)), calc(-50% - var(--dy)), 0) scale(2.1) rotate(var(--rot));
+    }
+}
+
 .footer {
     border-top: 1px solid var(--border);
     padding-top: 24px;
@@ -447,21 +541,26 @@ body {
         grid-template-columns: 1fr;
         gap: 32px;
     }
+
     .sidebar {
         position: static;
         height: auto;
         padding: 48px 0 24px;
     }
+
     .side-nav {
         display: none;
     }
+
     .content {
         padding: 0 0 48px;
     }
+
     .project-card {
         grid-template-columns: 1fr;
         gap: 6px;
     }
+
     .email-btn {
         margin-top: 10px;
     }
